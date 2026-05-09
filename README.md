@@ -78,12 +78,22 @@ To make the system even more robust and capable for professional-grade analytics
 
 **1. Install Dependencies:**
 
+Download the `best.pt` model file from the following Google Drive link:
+
+[Google Drive - best.pt](https://drive.google.com/file/d/1IldOt4mS4wSu9riPh9GkqaI7bqHogwK0/view?usp=sharing)
+
+Place the downloaded file in:
+
+```text
+runs/detect/train/weights/
+```
+
 ```bash
 pip install ultralytics mediapipe opencv-python numpy
 ```
 
 **2. Run the Analyzer:**
-Ensure you have the required YOLO weights (`yolov8s.pt` and your custom ball model `best.pt`) in the correct paths.
+Ensure you have the required YOLO weights (`yolov8s.pt` and the custom ball model `best.pt`) in the correct paths.
 
 ```bash
 python shot_type.py
