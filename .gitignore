@@ -1,0 +1,4 @@
+myenv/
+__pycache__/
+tennis-ball-detection-6/
+*.pt
