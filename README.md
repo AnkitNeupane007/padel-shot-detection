@@ -42,7 +42,7 @@ The core system is implemented in the `PadelAnalyzer` class, which processes the
 
 Detecting a small, fast-moving ball in a complex background is challenging.
 
-- **Initial Attempt (Raw OpenCV):** The first iteration relied on raw OpenCV techniques such as color masking, background subtraction, and contour detection. This approach quickly failed because it was too sensitive to noise—every small, moving pixel cluster (shoes, reflections, court debris) was falsely detected as a ball.
+- **Initial Attempt (Raw OpenCV):** The first iteration relied on raw OpenCV techniques such as color masking, background subtraction, and contour detection. This approach quickly failed because it was too sensitive to noise where every small, moving pixel cluster (shoes, reflections, court debris) was falsely detected as a ball.
 - **Current Solution (Custom YOLOv8):** To achieve robustness, the system now uses a **custom-trained YOLOv8 model** specifically fine-tuned on tennis/padel ball datasets. This deep learning approach drastically reduced false positives and gracefully handles motion blur. The players and racket detection however is done through the base YOLO model.
 
 ### Pose Estimation for Shot Classification
